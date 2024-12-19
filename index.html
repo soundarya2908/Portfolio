@@ -9,18 +9,15 @@
 <body>
     <!-- Background Section -->
     <div class="background-container">
-        <!-- Video background -->
         <video autoplay loop muted>
             <source src="./background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!-- Overlay for opacity effect -->
         <div class="overlay"></div>
     </div>
 
     <!-- Foreground content -->
     <div class="container">
-        <!-- Sidebar with transparent background -->
         <div class="sidebar">
             <div class="tile" id="tile1" onmouseover="onHover(1)" onmouseout="onMouseOut(1)" onclick="showContent(1)" style="background-image: url('./Mars.jpg');">
                 <div class="button-text">Experience</div>
@@ -34,24 +31,17 @@
                 <div class="button-text">Skills</div>
                 <div class="chat-bubble" id="bubble3">Jupiter is huge, So are my skills!</div>
             </div>
-                      
         </div>
 
-        <!-- Main Content Area -->
         <div class="main-content">
-            <!-- Experience Content -->
             <div class="content" id="content1">
                 <h2>Experience</h2>
                 <p>This is where I talk about my experience in the tech world.</p>
             </div>
-
-            <!-- Projects Content -->
             <div class="content" id="content2">
                 <h2>Projects</h2>
                 <p>Here are some of the projects I have worked on.</p>
             </div>
-
-            <!-- Skills Content -->
             <div class="content" id="content3">
                 <h2>Skills</h2>
                 <p>These are the skills I bring to the table in software development.</p>
@@ -59,6 +49,15 @@
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <!-- Popup Window -->
+    <div class="popup-window" id="popupWindow">
+        <div class="popup-content" id="popupContent">
+            <!-- The close button stays here, outside of dynamic content -->
+            <button class="close-button" onclick="closePopup()">X</button>
+            <div id="dynamicContent"></div> <!-- Placeholder for dynamic content -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

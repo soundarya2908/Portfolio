@@ -51,6 +51,12 @@ body {
     transform: scale(1.1);
 }
 
+/* Selected Tile Effect */
+.tile.selected {
+    transform: scale(1.2);  /* Make the selected tile bigger */
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.9);  /* Make it stand out */
+}
+
 /* Text inside the planet button */
 .tile .button-text {
     color: white;
@@ -135,6 +141,12 @@ body {
     transform: scale(1.1);  /* Slightly scale up the bubble on hover */
 }
 
+/* Planet Tile Selected Style */
+.tile.selected {
+    transform: scale(1.2);  /* Scale the tile when selected */
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.9);  /* Stronger shadow when selected */
+}
+
 /* Overlay with opacity */
 .overlay {
     position: absolute;
@@ -144,4 +156,49 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: -1;
+}
+
+/* Popup Window Styles */
+.popup-window {
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 250px);
+    max-width: 100%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    display: none; 
+    overflow-y: auto; 
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.3); /* Slight white background */
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* Close button hover effect */
+.close-button:hover {
+    background: rgba(242, 6, 6, 0.6); /* Slightly more visible on hover */
+}
+
+/* Popup content */
+.popup-content {
+    color: white;
+    font-size: 16px;
+    position: relative;
 }
